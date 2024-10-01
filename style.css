@@ -12,9 +12,15 @@
     line-height: 1.5;
 }
 
-/* Colors */
+li {
+    list-style: none;
+}
+
+/* Colors  && Fonts */
 
 :root {
+
+    /* Colors */
 
     /* Primary */
     --Strong--Cyan: hsl(171, 66%, 44%);
@@ -23,6 +29,17 @@
     /* Neutral */
     --Dark--Grayish--Blue: hsl(210, 10%, 33%);
     --Grayish__Blue: hsl(201, 11%, 66%);
+
+    /* -------------------------------------------- */
+
+    /* Fonts */
+
+    --smaller: 0.875rem;    /* 14px */
+    --smallish: 0.938rem;  /* 15px */
+    --small: 1.125rem;    /* 18px */
+    --Medium: 1.25rem;   /* 20px */
+    --Big: 1.875rem;    /* 30px */
+    --Bigger: 2.5rem;  /* 40px */
 }
 
 /* --- */
@@ -41,7 +58,7 @@ body {
 button {
     border-style: none;
     cursor: pointer;
-    font-size: 18px;
+    font-size: var(--small);
     font-weight: 400;
     color: white;
     padding: 0.5em 1.5em;
@@ -78,19 +95,18 @@ button {
 section {
     text-align: center;
     margin-bottom: 140px;
-    /* border: 1px solid red; */
     padding-bottom: 20px;
 }
 
 .title {
-    font-size: 40px;
+    font-size: var(--Bigger);  
     font-weight: 600;
     color: var(--Dark--Grayish--Blue);
     padding-bottom: 15px;
 }
 
 .subtitle {
-    font-size: 18px;
+    font-size: var(--small);
     font-weight: 400;
     color: var(--Grayish__Blue);
 }
@@ -144,14 +160,14 @@ section {
 }
 
 .section__three__title {
-    font-size: 20px;
+    font-size: var(--Medium);
     font-weight: 600;
     color: var(--Dark--Grayish--Blue);
     padding-bottom: 15px;
 }
 
 .section__three__subtitle {
-    font-size: 14px;
+    font-size: var(--smaller);
     font-weight: 400;
     color: var(--Grayish__Blue);
     max-width: 34ch;
@@ -193,7 +209,7 @@ section {
 }
 
 .tools__title {
-    font-size: 20px;
+    font-size: var(--Medium); 
     font-weight: 600;
     color: var(--Dark--Grayish--Blue);
     padding-bottom: 15px;
@@ -201,7 +217,7 @@ section {
 }
 
 .tools__subtitle {
-    font-size: 14px;
+    font-size: var(--smaller); 
     font-weight: 400;
     color: var(--Grayish__Blue);
     max-width: 34ch;
@@ -210,7 +226,7 @@ section {
 
 /* Section__Six */
 
-.section__six {
+.section__six__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -330,11 +346,16 @@ footer {
 
 
     .section__three__title {
-        font-size: 40px;
+        font-size: var(--Bigger); 
     }
 
     .section__three__subtitle {
-        font-size: 18px;
+        font-size: var(--small);
+    }
+
+    .section__six__wrapper {
+        flex-direction: column;
+        gap: 100px;
     }
 
 }
@@ -357,20 +378,15 @@ footer {
     }
 
     .tools__title {
-        font-size: 30px;
+        font-size: var(--Big);
         margin-top: 20px;
     }
 
     .tools__subtitle {
-        font-size: 18px;
+        font-size: var(--small);
     }
 
     /* Section__Six */
-
-    .section__six {
-        flex-direction: column;
-        gap: 100px;
-    }
 
     .section__six__img {
         scale: 1.1;
@@ -414,7 +430,7 @@ footer {
     .section__five__title,
     .tools__title,
     .section__seven__title {
-        font-size: 30px;
+        font-size: var(--Big); 
     }
 
     .section__one__subtitle,
@@ -424,7 +440,7 @@ footer {
     .section__five__subtitle,
     .tools__subtitle,
     .section__seven__subtitle {
-        font-size: 18px;
+        font-size: var(--small); 
         max-width: 44ch;
         margin-inline: auto;
     }
@@ -482,7 +498,7 @@ footer {
     .section__five__title,
     .tools__title,
     .section__seven__title {
-        font-size: 20px;
+        font-size: var(--Medium);
     }
 
     .section__one__subtitle,
@@ -492,7 +508,7 @@ footer {
     .section__five__subtitle,
     .tools__subtitle,
     .section__seven__subtitle {
-        font-size: 15px;
+        font-size: var(--smallish);
         max-width: 35ch;
         margin-inline: auto;
     }
